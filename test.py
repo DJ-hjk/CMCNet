@@ -113,10 +113,10 @@ def test():
     global_background_iou = total_background_intersection / (total_background_union + 1e-6)
     global_miou = (global_crack_iou + global_background_iou) / 2
 
-    print(f'Global Precision: {global_precision:.4f}')
-    print(f'Global Recall: {global_recall:.4f}')
-    print(f'Global F1 Score: {global_f1:.4f}')
-    print(f'Global Mean IOU (mIoU): {global_miou:.4f}')
+    print(f'Precision: {global_precision:.4f}')
+    print(f'Recall: {global_recall:.4f}')
+    print(f'F1 Score: {global_f1:.4f}')
+    print(f'Mean IOU (mIoU): {global_miou:.4f}')
 
 
 if __name__ == '__main__':
