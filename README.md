@@ -11,4 +11,5 @@ You can modify the parameters in train.py and run it according to the following 
 train.py
 
 ## Model weight
+:rocket::rocket::rocket:
 链接: https://pan.baidu.com/s/1_nfgqW9lf__0catdckPzsw?pwd=1234 提取码: 1234
