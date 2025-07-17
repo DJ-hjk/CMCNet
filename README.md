@@ -2,13 +2,13 @@
 :four_leaf_clover:	:four_leaf_clover:	:four_leaf_clover:	  
 This study is submitting The manuscript to The Visual Computer journal   
 
-## Environment
-:smile_cat:	:smile_cat:	:smile_cat:	  
+## Environment 
 torch == 2.3.1+cu121  
 Python == 3.12.3  
 CUDA version == 12.1  
 
 ## Run
+:smile_cat:	:smile_cat:	:smile_cat:	   
 You can modify the parameters in train.py and run it according to the following command:
 train.py
 
