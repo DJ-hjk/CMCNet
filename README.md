@@ -1,6 +1,6 @@
 # Enhanced Bridge Crack Segmentation via CNN-Mamba Dual Encoders with Edge Enhancement
 :four_leaf_clover:	:four_leaf_clover:	:four_leaf_clover:	  
-This study is submitting The manuscript to The Visual Computer journal   
+This study is submitting the manuscript to The Visual Computer journal   
 
 ## Environment 
 torch == 2.3.1+cu121  
