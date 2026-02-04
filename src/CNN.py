@@ -10,33 +10,37 @@ class CNN(nn.Module):
         self.conv1_1 = DOConv2d(3, 32,3)
         self.conv1_2 = DOConv2d(32, 32,3)
         self.conv1_3 = DOConv2d(32, 32,3)
-        self.norm1 = nn.BatchNorm2d(32)
+        self.norm1_1 = nn.BatchNorm2d(32)
+        self.norm1_2 = nn.BatchNorm2d(32)
+        self.norm1_3 = nn.BatchNorm2d(32)
+
         self.act = nn.GELU()
 
         self.c1_1 = nn.Sequential(self.conv1_1,
-                                  self.norm1,
+                                  self.norm1_1,
                                   self.act)
         self.c1_2 = nn.Sequential(self.conv1_2,
-                                  self.norm1,
+                                  self.norm1_2,
                                   self.act)
         self.c1_3 = nn.Sequential(self.conv1_3,
-                                  self.norm1,
+                                  self.norm1_3,
                                   self.act)
         self.res1 = nn.Conv2d(64, 32, kernel_size=1)
         #layer2
         self.conv2_1 = DOConv2d(32, 64,3)
         self.conv2_2 = DOConv2d(64, 64,3)
         self.conv2_3 = DOConv2d(64, 64,3)
-        self.norm2 = nn.BatchNorm2d(64)
-
+        self.norm2_1 = nn.BatchNorm2d(64)
+        self.norm2_2 = nn.BatchNorm2d(64)
+        self.norm2_3 = nn.BatchNorm2d(64)
         self.c2_1 = nn.Sequential(self.conv2_1,
-                                  self.norm2,
+                                  self.norm2_1,
                                   self.act)
         self.c2_2 = nn.Sequential(self.conv2_2,
-                                  self.norm2,
+                                  self.norm2_2,
                                   self.act)
         self.c2_3 = nn.Sequential(self.conv2_3,
-                                  self.norm2,
+                                  self.norm2_3,
                                   self.act)
         self.res2 = nn.Conv2d(128, 64, kernel_size=1)
         #layer3
@@ -45,21 +49,25 @@ class CNN(nn.Module):
         self.conv3_3 = DOConv2d(128, 128,3)
         self.conv3_4 = DOConv2d(128, 128,3)
         self.conv3_5 = DOConv2d(128, 128,3)
-        self.norm3 = nn.BatchNorm2d(128)
+        self.norm3_1 = nn.BatchNorm2d(128)
+        self.norm3_2 = nn.BatchNorm2d(128)
+        self.norm3_3 = nn.BatchNorm2d(128)
+        self.norm3_4 = nn.BatchNorm2d(128)
+        self.norm3_5 = nn.BatchNorm2d(128)
         self.c3_1 = nn.Sequential(self.conv3_1,
-                                  self.norm3,
+                                  self.norm3_1,
                                   self.act)
         self.c3_2 = nn.Sequential(self.conv3_2,
-                                  self.norm3,
+                                  self.norm3_2,
                                   self.act)
         self.c3_3 = nn.Sequential(self.conv3_3,
-                                  self.norm3,
+                                  self.norm3_3,
                                   self.act)
         self.c3_4 = nn.Sequential(self.conv3_4,
-                                  self.norm3,
+                                  self.norm3_4,
                                   self.act)
         self.c3_5 = nn.Sequential(self.conv3_5,
-                                  self.norm3,
+                                  self.norm3_5,
                                   self.act)
         self.res3 = nn.Conv2d(256, 128, 1)
         #layer4
@@ -68,13 +76,13 @@ class CNN(nn.Module):
         self.conv4_3 = DOConv2d(256, 256,3)
         self.norm4 = nn.BatchNorm2d(256)
         self.c4_1 = nn.Sequential(self.conv4_1,
-                                  self.norm4,
+                                  self.norm4_1,
                                   self.act)
         self.c4_2 = nn.Sequential(self.conv4_2,
-                                  self.norm4,
+                                  self.norm4_2,
                                   self.act)
         self.c4_3 = nn.Sequential(self.conv4_3,
-                                  self.norm4,
+                                  self.norm4_3,
                                   self.act)
         self.res4 = nn.Conv2d(512, 256, 1)
 
