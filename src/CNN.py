@@ -74,7 +74,9 @@ class CNN(nn.Module):
         self.conv4_1 = DOConv2d(128, 256,3)
         self.conv4_2 = DOConv2d(256, 256,3)
         self.conv4_3 = DOConv2d(256, 256,3)
-        self.norm4 = nn.BatchNorm2d(256)
+        self.norm4_1 = nn.BatchNorm2d(256)
+        self.norm4_2 = nn.BatchNorm2d(256)
+        self.norm4_3 = nn.BatchNorm2d(256)
         self.c4_1 = nn.Sequential(self.conv4_1,
                                   self.norm4_1,
                                   self.act)
